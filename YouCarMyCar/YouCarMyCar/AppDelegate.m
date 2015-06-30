@@ -20,8 +20,16 @@
     // Override point for customization after application launch.
     RootTaBarViewController *root = [[RootTaBarViewController alloc]init];
     self.window.rootViewController = root;
+//title 字体白色
+    NSDictionary * dict=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
+    [[UINavigationBar appearance] setTitleTextAttributes:dict];
     
+    
+//最上面字体白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    
+//设置navigationbar 的颜色为蓝色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:48/255.0 green:166/255.0 blue:241/255.0 alpha:1]];
 
     return YES;
 }
