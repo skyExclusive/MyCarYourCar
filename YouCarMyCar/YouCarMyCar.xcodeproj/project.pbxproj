@@ -94,6 +94,8 @@
 		0ACAF2C91B4120820029ACC9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2C81B4120820029ACC9 /* MessageUI.framework */; };
 		0ACAF2CB1B41208E0029ACC9 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2CA1B41208E0029ACC9 /* libstdc++.dylib */; };
 		0ACAF2CD1B4120980029ACC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACAF2CC1B4120980029ACC9 /* libsqlite3.dylib */; };
+		0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE6F1B422A8600C3C98B /* 1.jpg */; };
+		0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AFBFE701B422A8600C3C98B /* 2.jpg */; };
 		95BA8E5C1B414CA600A48BB1 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BA8E511B414CA600A48BB1 /* 1.png */; };
 		95BA8E5D1B414CA600A48BB1 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BA8E521B414CA600A48BB1 /* 2.png */; };
 		95BA8E5E1B414CA600A48BB1 /* ButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA8E541B414CA600A48BB1 /* ButtonTableViewCell.m */; };
@@ -263,6 +265,8 @@
 		0ACAF2C81B4120820029ACC9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0ACAF2CA1B41208E0029ACC9 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		0ACAF2CC1B4120980029ACC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0AFBFE6F1B422A8600C3C98B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		0AFBFE701B422A8600C3C98B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		95BA8E511B414CA600A48BB1 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		95BA8E521B414CA600A48BB1 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		95BA8E531B414CA600A48BB1 /* ButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonTableViewCell.h; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 		0ACAF1A21B411E300029ACC9 = {
 			isa = PBXGroup;
 			children = (
+				0AFBFE6F1B422A8600C3C98B /* 1.jpg */,
+				0AFBFE701B422A8600C3C98B /* 2.jpg */,
 				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0ACAF2751B411ED30029ACC9 /* Three */,
 				0ACAF26E1B411EC70029ACC9 /* Second */,
@@ -861,9 +867,11 @@
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
+				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
 				0ACAF2AD1B411EE50029ACC9 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				95BA8E5F1B414CA600A48BB1 /* ButtonTableViewCell.xib in Resources */,
+				0AFBFE711B422A8600C3C98B /* 1.jpg in Resources */,
 				0ACAF2521B411E830029ACC9 /* MJRefresh.bundle in Resources */,
 				0ACAF1BC1B411E300029ACC9 /* Images.xcassets in Resources */,
 				95BA8E611B414CA600A48BB1 /* TongyongTableViewCell.xib in Resources */,
