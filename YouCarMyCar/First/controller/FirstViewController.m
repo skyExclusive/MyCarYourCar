@@ -58,7 +58,6 @@
     image1.image = [UIImage imageNamed:@"2.jpg"];
     [self.myscrollView addSubview:image1];
     
-    
 }
 -(void)segmentAction:(UISegmentedControl *)segmeng
 {
