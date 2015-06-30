@@ -104,6 +104,7 @@
 		95BA8E611B414CA600A48BB1 /* TongyongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BA8E581B414CA600A48BB1 /* TongyongTableViewCell.xib */; };
 		95BA8E621B414CA600A48BB1 /* TouxiangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA8E5A1B414CA600A48BB1 /* TouxiangTableViewCell.m */; };
 		95BA8E631B414CA600A48BB1 /* TouxiangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BA8E5B1B414CA600A48BB1 /* TouxiangTableViewCell.xib */; };
+		95C8DED21B422ECF00FA1FDD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8DED11B422ECF00FA1FDD /* 3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,6 +279,7 @@
 		95BA8E591B414CA600A48BB1 /* TouxiangTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouxiangTableViewCell.h; sourceTree = "<group>"; };
 		95BA8E5A1B414CA600A48BB1 /* TouxiangTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouxiangTableViewCell.m; sourceTree = "<group>"; };
 		95BA8E5B1B414CA600A48BB1 /* TouxiangTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouxiangTableViewCell.xib; sourceTree = "<group>"; };
+		95C8DED11B422ECF00FA1FDD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +333,7 @@
 			children = (
 				0AFBFE6F1B422A8600C3C98B /* 1.jpg */,
 				0AFBFE701B422A8600C3C98B /* 2.jpg */,
+				95C8DED11B422ECF00FA1FDD /* 3.png */,
 				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0ACAF2751B411ED30029ACC9 /* Three */,
 				0ACAF26E1B411EC70029ACC9 /* Second */,
@@ -866,6 +869,7 @@
 				0ACAF1BA1B411E300029ACC9 /* Main.storyboard in Resources */,
 				0ACAF1BF1B411E300029ACC9 /* LaunchScreen.xib in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
+				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,

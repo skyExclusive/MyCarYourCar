@@ -19,6 +19,9 @@
     self.view.backgroundColor = [UIColor redColor];
     self.navigationItem.title = @"往期回顾";
     // Do any additional setup after loading the view.
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    imageView.image = [UIImage imageNamed:@"3.png"];
+    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning {
