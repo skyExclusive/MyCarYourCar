@@ -13,14 +13,19 @@
 #import "WXApi.h"
 #import "WeiboApi.h"
 #import "WeiboSDK.h"
+#import "PrefixHeader.pch"
 #import <WeChatConnection/WeChatConnection.h>
+#import "NowViewController.h"
+#import "WillViewController.h"
+
 #import <QZoneConnection/QZoneConnection.h>
 #define kseGmentHeight 40
 #define kscrollViewH 104
 
 
-@interface FirstViewController ()
-
+@interface FirstViewController ()<UIScrollViewDelegate>
+@property (nonatomic,strong)NowViewController *nowVC;
+@property (nonatomic,strong)WillViewController *willVC;
 @end
 
 @implementation FirstViewController
@@ -29,7 +34,9 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor purpleColor];
     self.navigationItem.title = @"免费体验商品";
-    [self costom];//布局
+    
+     //布局
+    [self costom];
     
     
    }
@@ -38,25 +45,36 @@
 {
     //布局segment
     self.mySegment = [[UISegmentedControl alloc]initWithItems:@[@"正在进行",@"即将开启"]];
-    self.mySegment.backgroundColor = [UIColor blackColor];
-    self.mySegment.frame = CGRectMake(0, 64, self.view.frame.size.width,kseGmentHeight);
+    self.mySegment.backgroundColor = [UIColor whiteColor];
+    self.mySegment.frame = CGRectMake(0, 64, kMainWidth,kseGmentHeight);
     [self.mySegment addTarget:self action:@selector(segmentAction:) forControlEvents:(UIControlEventValueChanged)];
     self.mySegment.selectedSegmentIndex = 0;
     [self.view addSubview:self.mySegment];
     //布局 UIScrollView
-    self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, kscrollViewH, self.view.frame.size.width, self.view.frame.size.height - kscrollViewH - 44)];
-    self.myscrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2, self.view.frame.size.height - kscrollViewH - 44);
+    self.myscrollView  = [[UIScrollView alloc]initWithFrame:CGRectMake(0, kscrollViewH, kMainWidth, kMainHeight - kscrollViewH - 44)];
+    self.myscrollView.contentSize = CGSizeMake(kMainWidth * 2, kMainHeight - kscrollViewH - 44);
     self.myscrollView.backgroundColor = [UIColor whiteColor];
+    self.myscrollView.showsVerticalScrollIndicator = NO;
+    self.myscrollView.showsVerticalScrollIndicator = NO;
+    self.myscrollView.pagingEnabled = YES;
+    self.myscrollView.delegate = self;
     [self.view   addSubview:self.myscrollView];
-    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - kscrollViewH - 44)];
-    image.image = [UIImage imageNamed:@"1.jpg"];
-    [self.myscrollView addSubview:image];
-    UIImageView *image1 = [[UIImageView  alloc]initWithFrame:CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width, self.view.frame.size.height - kscrollViewH - 44)];
-    image1.image = [UIImage imageNamed:@"2.jpg"];
-    [self.myscrollView addSubview:image1];
+
+    self.nowVC = [[NowViewController alloc]init];
+    self.willVC = [[WillViewController alloc]init];
+    self.nowVC.view.frame = CGRectMake(0, kMainY, kMainWidth, kMainHeight);
+    self.willVC.view.frame = CGRectMake(kMainWidth, kMainY, kMainWidth, kMainHeight);
+    
+    [self addChildViewController:self.nowVC];
+    [self.myscrollView addSubview:self.nowVC.view];
+    [self addChildViewController:self.willVC];
+    [self.myscrollView addSubview:self.willVC.view];
+    
+    
     
 }
--(void)segmentAction:(UISegmentedControl *)segment
+
+-(void)segmentAction:(UISegmentedControl *)segmeng
 {
     if (segment.selectedSegmentIndex == 0) {
         NSLog(@"正在进行的商品");
@@ -66,6 +84,11 @@
         self.myscrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0);
     }
     
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    self.mySegment.selectedSegmentIndex = self.myscrollView.contentOffset.x/kMainWidth;
 }
 
 - (void)didReceiveMemoryWarning {
