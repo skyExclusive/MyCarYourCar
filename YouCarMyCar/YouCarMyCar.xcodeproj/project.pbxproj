@@ -292,10 +292,8 @@
 		957B455A1B43E512001DC011 /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
 		957B455C1B43EB5D001DC011 /* SxiangViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SxiangViewController.h; sourceTree = "<group>"; };
 		957B455D1B43EB5D001DC011 /* SxiangViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SxiangViewController.m; sourceTree = "<group>"; };
-=======
 		0AFBFE6F1B422A8600C3C98B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../1.jpg; sourceTree = "<group>"; };
 		0AFBFE701B422A8600C3C98B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../2.jpg; sourceTree = "<group>"; };
->>>>>>> b89be53c46b6e4031f7927c4aa83e239e6d63de7
 		95BA8E511B414CA600A48BB1 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		95BA8E521B414CA600A48BB1 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		95BA8E531B414CA600A48BB1 /* ButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonTableViewCell.h; sourceTree = "<group>"; };
@@ -386,7 +384,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
->>>>>>> b89be53c46b6e4031f7927c4aa83e239e6d63de7
 		0A9E68481B43B51300A71D88 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,7 +408,6 @@
 			sourceTree = "<group>";
 		};
 		0A9E68501B43BDDC00A71D88 /* image */ = {
->>>>>>> b89be53c46b6e4031f7927c4aa83e239e6d63de7
 			isa = PBXGroup;
 			children = (
 				95F8FE181B43C5A600B5E790 /* sure.png */,
@@ -433,7 +429,6 @@
 			isa = PBXGroup;
 			children = (
 				0A9E68501B43BDDC00A71D88 /* image */,
->>>>>>> b89be53c46b6e4031f7927c4aa83e239e6d63de7
 				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0ACAF2751B411ED30029ACC9 /* Three */,
 				0ACAF26E1B411EC70029ACC9 /* Second */,
@@ -977,13 +972,10 @@
 				95F8FE1F1B43C5A600B5E790 /* 20150418072826995_easyicon_net_1024.png in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
-				95F8FE361B43DE4900B5E790 /* d.png in Resources */,
-=======
-				0A9E684F1B43B6D600A71D88 /* ListFirstTableViewCell.xib in Resources */,
+				95F8FE361B43DE4900B5E790 /* d.png in Resources */,				0A9E684F1B43B6D600A71D88 /* ListFirstTableViewCell.xib in Resources */,
 				0ACAF2A91B411EE50029ACC9 /* ShareSDKLocalizable.strings in Resources */,
 				95C8DED21B422ECF00FA1FDD /* 3.png in Resources */,
 				0A9E68531B43BDDC00A71D88 /* 白背景.png in Resources */,
->>>>>>> b89be53c46b6e4031f7927c4aa83e239e6d63de7
 				0ACAF2AA1B411EE50029ACC9 /* Resource.bundle in Resources */,
 				0AFBFE721B422A8600C3C98B /* 2.jpg in Resources */,
 				0ACAF2B31B411EE60029ACC9 /* ShareSDKFlatShareViewUI.bundle in Resources */,
