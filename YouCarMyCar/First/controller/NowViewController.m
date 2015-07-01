@@ -8,6 +8,8 @@
 
 #import "NowViewController.h"
 #import "PrefixHeader.pch"
+#import "ListFirstTableViewCell.h"
+
 @interface NowViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *mytable;
 @end
@@ -22,10 +24,17 @@
     self.mytable.dataSource = self;
     [self.view addSubview:self.mytable
      ];
+    self.mytable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self cell];//注册cell
 
 
 }
-
+-(void)cell
+{
+    [self.mytable registerNib:[UINib nibWithNibName:@"ListFirstTableViewCell" bundle:nil] forCellReuseIdentifier:@"first1cell"];
+    
+    
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return 1;
@@ -38,20 +47,23 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+    
+    
+    return (self.view.frame.size.height - 64 - 44 - 40)/ 3;
 }
+
+
 //- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 //{
 //    
 //}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *cellIdentifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue2) reuseIdentifier:cellIdentifier];
-    }
-    cell.backgroundColor = [UIColor blueColor];
+    
+    ListFirstTableViewCell *cell = [self.mytable dequeueReusableCellWithIdentifier:@"first1cell" forIndexPath:indexPath];
+    
+    
+    
     
     return cell;
 }
