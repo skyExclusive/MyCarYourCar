@@ -105,6 +105,8 @@
 		95BA8E621B414CA600A48BB1 /* TouxiangTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA8E5A1B414CA600A48BB1 /* TouxiangTableViewCell.m */; };
 		95BA8E631B414CA600A48BB1 /* TouxiangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BA8E5B1B414CA600A48BB1 /* TouxiangTableViewCell.xib */; };
 		95C8DED21B422ECF00FA1FDD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95C8DED11B422ECF00FA1FDD /* 3.png */; };
+		95E5AC911B437D4600904602 /* NowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC901B437D4600904602 /* NowViewController.m */; };
+		95E5AC941B437D5200904602 /* WillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E5AC931B437D5200904602 /* WillViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -280,6 +282,11 @@
 		95BA8E5A1B414CA600A48BB1 /* TouxiangTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouxiangTableViewCell.m; sourceTree = "<group>"; };
 		95BA8E5B1B414CA600A48BB1 /* TouxiangTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouxiangTableViewCell.xib; sourceTree = "<group>"; };
 		95C8DED11B422ECF00FA1FDD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		95C8DED31B42413200FA1FDD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		95E5AC8F1B437D4600904602 /* NowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowViewController.h; sourceTree = "<group>"; };
+		95E5AC901B437D4600904602 /* NowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowViewController.m; sourceTree = "<group>"; };
+		95E5AC921B437D5200904602 /* WillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WillViewController.h; sourceTree = "<group>"; };
+		95E5AC931B437D5200904602 /* WillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WillViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +368,7 @@
 				0ACAF1B31B411E300029ACC9 /* AppDelegate.m */,
 				0ACAF1D41B411E710029ACC9 /* RootTaBarViewController.h */,
 				0ACAF1D51B411E710029ACC9 /* RootTaBarViewController.m */,
+				95C8DED31B42413200FA1FDD /* PrefixHeader.pch */,
 				0ACAF1B81B411E300029ACC9 /* Main.storyboard */,
 				0ACAF1BB1B411E300029ACC9 /* Images.xcassets */,
 				0ACAF1BD1B411E300029ACC9 /* LaunchScreen.xib */,
@@ -591,6 +599,10 @@
 			children = (
 				0ACAF2691B411EB90029ACC9 /* FirstViewController.h */,
 				0ACAF26A1B411EB90029ACC9 /* FirstViewController.m */,
+				95E5AC8F1B437D4600904602 /* NowViewController.h */,
+				95E5AC901B437D4600904602 /* NowViewController.m */,
+				95E5AC921B437D5200904602 /* WillViewController.h */,
+				95E5AC931B437D5200904602 /* WillViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -911,6 +923,7 @@
 				0ACAF2631B411E830029ACC9 /* UIImage+WebP.m in Sources */,
 				0ACAF25B1B411E830029ACC9 /* SDWebImageDecoder.m in Sources */,
 				0ACAF2741B411EC70029ACC9 /* SecondViewController.m in Sources */,
+				95E5AC911B437D4600904602 /* NowViewController.m in Sources */,
 				0ACAF2621B411E830029ACC9 /* UIImage+MultiFormat.m in Sources */,
 				0ACAF2591B411E830029ACC9 /* SDImageCache.m in Sources */,
 				0ACAF27B1B411ED30029ACC9 /* ThreeViewController.m in Sources */,
@@ -943,6 +956,7 @@
 				0ACAF2581B411E830029ACC9 /* NSData+ImageContentType.m in Sources */,
 				0ACAF26D1B411EB90029ACC9 /* FirstViewController.m in Sources */,
 				95BA8E621B414CA600A48BB1 /* TouxiangTableViewCell.m in Sources */,
+				95E5AC941B437D5200904602 /* WillViewController.m in Sources */,
 				0ACAF2411B411E830029ACC9 /* AFURLRequestSerialization.m in Sources */,
 				0ACAF2441B411E830029ACC9 /* MJRefreshAutoFooter.m in Sources */,
 				0ACAF2431B411E830029ACC9 /* AFURLSessionManager.m in Sources */,
@@ -1082,6 +1096,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: longyu li (Y38498AQ2K)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Connection",
@@ -1091,6 +1106,7 @@
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = YouCarMyCar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1099,6 +1115,7 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7d665d26-cc37-405f-be18-936b3b1fb247";
 			};
 			name = Debug;
 		};
@@ -1106,6 +1123,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: longyu li (Y38498AQ2K)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Connection",
@@ -1115,6 +1133,7 @@
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = YouCarMyCar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1123,6 +1142,7 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7d665d26-cc37-405f-be18-936b3b1fb247";
 			};
 			name = Release;
 		};

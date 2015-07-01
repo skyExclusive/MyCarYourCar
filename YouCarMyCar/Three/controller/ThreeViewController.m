@@ -6,10 +6,16 @@
 //  Copyright (c) 2015年 LLY. All rights reserved.
 //
 
+
+
 #import "ThreeViewController.h"
 #import "TouxiangTableViewCell.h"
 #import "ButtonTableViewCell.h"
 #import "TongyongTableViewCell.h"
+#import "PrefixHeader.pch"
+
+#define kModaD self.view.frame.origin.x
+
 @interface ThreeViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableDictionary *dic;
@@ -26,12 +32,6 @@
     [self layoutView];
 
     
-
-    
-    
-    
-    
-    
 }
 
 //布局view
@@ -43,7 +43,6 @@
     self.dic = [[NSMutableDictionary alloc]init];
     NSArray *array1 = [[NSArray alloc]initWithObjects:@"我的参与",@"活动介绍",@"关于我们",@"用户反馈",@"版本更新", nil];
     NSArray *array2 = [[NSArray alloc]initWithObjects:@"退出登录", nil];
-    
     
     [self.dic  setValue:array1 forKey:@"1"];
     [self.dic  setValue:array2 forKey:@"2"];
@@ -62,7 +61,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     
-//又item
+//右item
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:(UIBarButtonItemStyleDone) target:self action:@selector(bianji)];
     self.navigationItem.rightBarButtonItem = item;
     
@@ -94,9 +93,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0 && indexPath.section == 0) {
-        return 130;
+        return kMainHeight*4
+        /22;
+        
     }else{
-        return 50;
+        return kMainHeight*4/55;
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -109,7 +110,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",indexPath.section]];
+    NSArray *array = [self.dic valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.section]];
     
     NSString *str = array[indexPath.row];
     
@@ -117,7 +118,7 @@
     if (indexPath.row == 0 && indexPath.section == 0) {
         
         TouxiangTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
-        cell.photoImage.layer.cornerRadius = 45;
+        cell.photoImage.layer.cornerRadius = cell.photoImage.frame.size.height/2;
         cell.photoImage.layer.masksToBounds = YES;
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.photoImage.image = [UIImage imageNamed:@"2.png"];
@@ -141,6 +142,7 @@
         if (indexPath.section == 1  && indexPath.row < 4) {
             cell.myView.alpha = 1;
         }
+        
         return cell;
     }
 }
