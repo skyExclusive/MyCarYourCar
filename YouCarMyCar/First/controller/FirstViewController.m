@@ -76,10 +76,10 @@
 
 -(void)segmentAction:(UISegmentedControl *)segmeng
 {
-    if (segment.selectedSegmentIndex == 0) {
+    if (segmeng.selectedSegmentIndex == 0) {
         NSLog(@"正在进行的商品");
         self.myscrollView.contentOffset = CGPointMake(0, 0);
-    }else if (segment.selectedSegmentIndex == 1){
+    }else if (segmeng.selectedSegmentIndex == 1){
         NSLog(@"即将开启");
         self.myscrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0);
     }

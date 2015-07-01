@@ -335,12 +335,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9E68461B43B4E600A71D88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A9E68471B43B4ED00A71D88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A9E68481B43B51300A71D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = controller/Model;
+			sourceTree = "<group>";
+		};
+		0A9E68491B43B52C00A71D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A9E684A1B43B53100A71D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0ACAF1A21B411E300029ACC9 = {
 			isa = PBXGroup;
 			children = (
 				0AFBFE6F1B422A8600C3C98B /* 1.jpg */,
-				0AFBFE701B422A8600C3C98B /* 2.jpg */,
 				95C8DED11B422ECF00FA1FDD /* 3.png */,
+				0AFBFE701B422A8600C3C98B /* 2.jpg */,
 				0ACAF27C1B411EE40029ACC9 /* ShareSDK */,
 				0ACAF2751B411ED30029ACC9 /* Three */,
 				0ACAF26E1B411EC70029ACC9 /* Second */,
@@ -587,8 +623,8 @@
 		0ACAF2671B411EB90029ACC9 /* First */ = {
 			isa = PBXGroup;
 			children = (
-				95BA8E4B1B414C8600A48BB1 /* model */,
-				95BA8E4C1B414C8600A48BB1 /* view */,
+				0A9E684A1B43B53100A71D88 /* Model */,
+				0A9E68471B43B4ED00A71D88 /* View */,
 				0ACAF2681B411EB90029ACC9 /* controller */,
 			);
 			path = First;
@@ -610,8 +646,8 @@
 		0ACAF26E1B411EC70029ACC9 /* Second */ = {
 			isa = PBXGroup;
 			children = (
-				95BA8E491B414C8100A48BB1 /* model */,
-				95BA8E4A1B414C8100A48BB1 /* view */,
+				0A9E68491B43B52C00A71D88 /* Model */,
+				0A9E68461B43B4E600A71D88 /* View */,
 				0ACAF26F1B411EC70029ACC9 /* controller */,
 			);
 			path = Second;
@@ -629,7 +665,7 @@
 		0ACAF2751B411ED30029ACC9 /* Three */ = {
 			isa = PBXGroup;
 			children = (
-				95BA8E4D1B414C9100A48BB1 /* model */,
+				0A9E68481B43B51300A71D88 /* Model */,
 				95BA8E4E1B414C9100A48BB1 /* view */,
 				0ACAF2761B411ED30029ACC9 /* controller */,
 			);
@@ -740,41 +776,6 @@
 				0ACAF2A01B411EE40029ACC9 /* ShareSDKShareActionSheet.framework */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		95BA8E491B414C8100A48BB1 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		95BA8E4A1B414C8100A48BB1 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		95BA8E4B1B414C8600A48BB1 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		95BA8E4C1B414C8600A48BB1 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		95BA8E4D1B414C9100A48BB1 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		95BA8E4E1B414C9100A48BB1 /* view */ = {
@@ -1107,7 +1108,6 @@
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = YouCarMyCar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1136,7 +1136,6 @@
 					"$(PROJECT_DIR)/ShareSDK/UI",
 				);
 				INFOPLIST_FILE = YouCarMyCar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
