@@ -35,20 +35,9 @@
     UINavigationController *threeVC = [[UINavigationController alloc]initWithRootViewController:three];
     
     threeVC.tabBarItem.title = @"我的";
-    
-    
-    
     self.viewControllers = @[firstVC , secondVC , threeVC];
     
-    
-    
-    
-    
-    
-    
-    
-    
-    // Do any additional setup after loading the view.
+       // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

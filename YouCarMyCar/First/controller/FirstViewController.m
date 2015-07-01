@@ -14,10 +14,7 @@
 #import "WeiboApi.h"
 #import "WeiboSDK.h"
 #import <WeChatConnection/WeChatConnection.h>
-
-
 #import <QZoneConnection/QZoneConnection.h>
-
 #define kseGmentHeight 40
 #define kscrollViewH 104
 
@@ -31,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor purpleColor];
-  self.navigationItem.title = @"免费体验商品";
+    self.navigationItem.title = @"免费体验商品";
     [self costom];//布局
     
     
@@ -59,12 +56,12 @@
     [self.myscrollView addSubview:image1];
     
 }
--(void)segmentAction:(UISegmentedControl *)segmeng
+-(void)segmentAction:(UISegmentedControl *)segment
 {
-    if (segmeng.selectedSegmentIndex == 0) {
+    if (segment.selectedSegmentIndex == 0) {
         NSLog(@"正在进行的商品");
         self.myscrollView.contentOffset = CGPointMake(0, 0);
-    }else if (segmeng.selectedSegmentIndex == 1){
+    }else if (segment.selectedSegmentIndex == 1){
         NSLog(@"即将开启");
         self.myscrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0);
     }
