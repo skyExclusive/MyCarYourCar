@@ -13,7 +13,7 @@
 #import "ButtonTableViewCell.h"
 #import "TongyongTableViewCell.h"
 #import "PrefixHeader.pch"
-
+#import "XiangViewController.h"
 #define kModaD self.view.frame.origin.x
 
 @interface ThreeViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -31,7 +31,7 @@
 //布局view
     [self layoutView];
 
-    
+
 }
 
 //布局view
@@ -61,18 +61,18 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     
-//右item
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:(UIBarButtonItemStyleDone) target:self action:@selector(bianji)];
-    self.navigationItem.rightBarButtonItem = item;
+////右item
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:(UIBarButtonItemStyleDone) target:self action:@selector(bianji)];
+//    self.navigationItem.rightBarButtonItem = item;
     
     
 }
 
 //编辑的点击事件
--(void)bianji
-{
-    NSLog(@"---------------------编辑---------------------");
-}
+//-(void)bianji
+//{
+//    NSLog(@"---------------------编辑---------------------");
+//}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -81,9 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (section == 0) {
-        return 2;
-    }else if (section == 1){
+    if (section == 1) {
         return 5;
     }else{
         return 1;
@@ -93,7 +91,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0 && indexPath.section == 0) {
-        return kMainHeight*4
+        return kMainHeight*5
         /22;
         
     }else{
@@ -102,7 +100,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) {
+    if (section == 1 || section  ==0) {
         return 0;
     }else{
         return 5;
@@ -122,21 +120,25 @@
         cell.photoImage.layer.masksToBounds = YES;
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.photoImage.image = [UIImage imageNamed:@"2.png"];
-        
+        cell.backimage.image = [UIImage imageNamed:@"2.png"];
+        UIVisualEffectView *visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+        visualEfView.frame = cell.backimage.frame;
+        visualEfView.alpha = 1.0;
+        [cell.backimage addSubview:visualEfView];
+        cell.photoImage.userInteractionEnabled = YES;
+        cell.superview.superview.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
+        //轻怕手势
+        UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(push:)];
+        self.view.userInteractionEnabled = YES;
+        [cell.photoImage addGestureRecognizer:tap1];
+
         return cell;
         
-        
-    }else if(indexPath.section == 0 && indexPath.row == 1){
-        
-        ButtonTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"buttonCell" forIndexPath:indexPath];
-        cell.selectionStyle =UITableViewCellSelectionStyleNone;
-        cell.superview.superview.backgroundColor =  [UIColor colorWithRed:247/ 255.0 green:247/ 255.0  blue:247/ 255.0  alpha:1];
-        return cell;
         
     }else{
         
         TongyongTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"tongCell" forIndexPath:indexPath];;
-        cell.selectionStyle =UITableViewCellSelectionStyleNone;
+//        cell.selectionStyle =UITableViewCellSelectionStyleNone;
         cell.lableText.text = str;
         cell.lableText.textColor = [UIColor colorWithRed:15 / 255.0 green:15/ 255.0  blue:15/ 255.0  alpha:1];
         if (indexPath.section == 1  && indexPath.row < 4) {
@@ -146,7 +148,12 @@
         return cell;
     }
 }
-
+//头像的点击事件
+-(void)push:(UITapGestureRecognizer *)tap
+{
+    XiangViewController *xiangVC = [[XiangViewController alloc]init];
+    [self.navigationController pushViewController:xiangVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

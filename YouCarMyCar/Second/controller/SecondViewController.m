@@ -7,21 +7,90 @@
 //
 
 #import "SecondViewController.h"
-
-@interface SecondViewController ()
-
+#import "CollectionCell.h"
+#import "PrefixHeader.pch"
+#import "SxiangViewController.h"
+@interface SecondViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@property (nonatomic,strong)UICollectionView *collectionView;
 @end
 
 @implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-    self.navigationItem.title = @"往期回顾";
-    // Do any additional setup after loading the view.
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
-    imageView.image = [UIImage imageNamed:@"3.png"];
-    [self.view addSubview:imageView];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"往期试用";
+    //自定义View
+    [self layoutView];
+}
+
+//自定义View
+-(void)layoutView
+{
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    //设置section的header 的尺寸
+    flowLayout.headerReferenceSize = CGSizeMake(0, 20);
+    //设置footer的尺寸
+    flowLayout.footerReferenceSize = CGSizeMake(10, 10);
+    //没行的最小间距 默认 10;
+    flowLayout.minimumInteritemSpacing = 1;
+    //没列的最小间距 默认 10;
+    
+    //设置item 的大小 默认值为 50 50
+    flowLayout.itemSize = CGSizeMake(170, 170);
+    //设置section的内衍
+    [flowLayout setSectionInset:UIEdgeInsetsMake(0, 13, 0, 13)];
+    
+    self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    self.collectionView.backgroundColor = COLOR(255, 249, 247, 1);
+    
+    //注册cell
+    [_collectionView registerClass:[CollectionCell class] forCellWithReuseIdentifier:KcellIndetifier];
+    //注册header
+    [_collectionView registerClass:[UICollectionViewCell class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kHeaderIdentier];
+    //注册footer
+    [_collectionView registerClass:[UICollectionViewCell class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kFordIdentier];
+    //设置代理
+    _collectionView.delegate =self;
+    _collectionView.dataSource =self;
+    
+    [self.view addSubview:_collectionView];
+    
+}
+
+//返回CollectionView有几个Seciton 默认值是返回1
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 8;
+    
+}
+
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIndentifier" forIndexPath:indexPath];
+   
+    cell.backgroundColor = [UIColor clearColor];
+    cell.mylabel.text = @"----04期----";
+    cell.myimageView.image = [UIImage imageNamed:@"2.jpg"];
+ 
+
+    
+    return cell;
+    
+    
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    SxiangViewController *sXiangVC = [[SxiangViewController alloc]init];
+    [self.navigationController pushViewController:sXiangVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

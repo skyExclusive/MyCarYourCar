@@ -19,6 +19,15 @@
 #define kMainWidth ([UIScreen mainScreen].bounds.size.width)
 #define kMainHeight ([UIScreen mainScreen].bounds.size.height)
 
+
+
+
+
+
+#define KcellIndetifier @"cellIndentifier"
+#define kHeaderIdentier @"headerIdentier"
+#define kFordIdentier @"FordIdentier"
+
 //NavBar高度
 #define NavigationBar_HEIGHT 44
 

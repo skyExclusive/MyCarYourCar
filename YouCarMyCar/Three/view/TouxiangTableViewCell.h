@@ -10,5 +10,6 @@
 
 @interface TouxiangTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *photoImage;
+@property (weak, nonatomic) IBOutlet UIImageView *backimage;
 
 @end
